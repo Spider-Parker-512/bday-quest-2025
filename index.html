@@ -9,19 +9,18 @@
       margin: 0;
       background-color: #1e1e1e;
       font-family: 'Georgia', serif;
+      overflow: hidden;
     }
     .map {
       position: relative;
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
+      width: 100vw;
+      height: 100vh;
       background: url('fantasy-map.png') no-repeat center center;
-      background-size: contain;
-      aspect-ratio: 2 / 1;
+      background-size: cover;
     }
     .map-button {
       position: absolute;
-      padding: 100px 140px;
+      padding: 10px 14px;
       background-color: rgba(0, 0, 0, 0.7);
       color: #fff;
       border: none;
@@ -35,12 +34,12 @@
     .map-button:hover {
       background-color: rgba(0, 0, 0, 0.9);
     }
-    /* Adjusted button positions */
-    #btn-shire { top: 39%; left: 8%; }
-    #btn-rivendell { top: 48%; left: 28%; }
-    #btn-moria { top: 80%; left: 88%; }
-    #btn-rohan { top: 67%; left: 60%; }
-    #btn-mountdoom { top: 75%; left: 77%; }
+    /* Adjusted button positions for new full-screen layout */
+    #btn-shire { top: 8%; left: 15%; }
+    #btn-rivendell { top: 24%; left: 60%; }
+    #btn-moria { top: 45%; left: 16%; }
+    #btn-rohan { top: 60%; left: 47%; }
+    #btn-mountdoom { top: 75%; left: 80%; }
   </style>
 </head>
 <body>
