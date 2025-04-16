@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Quest Map</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1e1e1e;
+      font-family: 'Georgia', serif;
+      overflow-x: hidden;
+    }
+    .map {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: url('fantasy-map.png') no-repeat center center;
+      background-size: cover;
+    }
+    .map-button {
+      position: absolute;
+      padding: 10px 14px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+    .map-button:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    /* Position buttons over map */
+    #btn-shire { top: 20%; left: 10%; }
+    #btn-rivendell { top: 35%; left: 35%; }
+    #btn-moria { top: 50%; left: 55%; }
+    #btn-rohan { top: 65%; left: 40%; }
+    #btn-mountdoom { top: 80%; left: 75%; }
+  </style>
+</head>
+<body>
+  <div class="map">
+    <a id="btn-shire" class="map-button" href="shire.html">The Shire</a>
+    <a id="btn-rivendell" class="map-button" href="rivendell.html">Rivendell</a>
+    <a id="btn-moria" class="map-button" href="moria.html">Mines of Moria</a>
+    <a id="btn-rohan" class="map-button" href="rohan.html">Rohan</a>
+    <a id="btn-mountdoom" class="map-button" href="mountdoom.html">Mount Doom</a>
+  </div>
+</body>
+</html>
