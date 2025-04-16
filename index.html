@@ -46,6 +46,26 @@
     #btn-moria { top: 43%; left: 42%; }
     #btn-rohan { top: 56%; left: 48%; }
     #btn-mountdoom { top: 78%; left: 52%; }
+
+    .music-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .music-toggle:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
   </style>
 </head>
 <body>
@@ -56,5 +76,32 @@
     <a id="btn-rohan" class="map-button" href="rohan.html">Level 3</a>
     <a id="btn-mountdoom" class="map-button" href="mountdoom.html">Epilogue</a>
   </div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" src="background-music.mp3" loop></audio>
+  <button class="music-toggle" onclick="toggleMusic()">🎵</button>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    let musicPlaying = false;
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        musicPlaying = true;
+      } else {
+        music.pause();
+        musicPlaying = false;
+      }
+    }
+
+    // Start music on first click anywhere (for browser autoplay rules)
+    window.addEventListener('click', () => {
+      if (!musicPlaying) {
+        music.play().catch(() => {});
+        musicPlaying = true;
+      }
+    }, { once: true });
+  </script>
 </body>
 </html>
