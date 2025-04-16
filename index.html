@@ -9,14 +9,15 @@
       margin: 0;
       background-color: #1e1e1e;
       font-family: 'Georgia', serif;
-      overflow-x: hidden;
     }
     .map {
       position: relative;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
       background: url('fantasy-map.png') no-repeat center center;
-      background-size: cover;
+      background-size: contain;
+      aspect-ratio: 2 / 1;
     }
     .map-button {
       position: absolute;
@@ -25,7 +26,7 @@
       color: #fff;
       border: none;
       border-radius: 12px;
-      font-size: 1rem;
+      font-size: 0.9rem;
       cursor: pointer;
       text-decoration: none;
       text-align: center;
@@ -34,12 +35,12 @@
     .map-button:hover {
       background-color: rgba(0, 0, 0, 0.9);
     }
-    /* Position buttons over map */
-    #btn-shire { top: 20%; left: 10%; }
-    #btn-rivendell { top: 35%; left: 35%; }
-    #btn-moria { top: 50%; left: 55%; }
-    #btn-rohan { top: 65%; left: 40%; }
-    #btn-mountdoom { top: 80%; left: 75%; }
+    /* Adjusted button positions */
+    #btn-shire { top: 39%; left: 8%; }
+    #btn-rivendell { top: 48%; left: 28%; }
+    #btn-moria { top: 60%; left: 48%; }
+    #btn-rohan { top: 67%; left: 60%; }
+    #btn-mountdoom { top: 75%; left: 77%; }
   </style>
 </head>
 <body>
