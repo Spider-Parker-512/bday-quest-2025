@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Quest</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: url('fantasy-map.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .location {
+      position: absolute;
+      pointer-events: auto;
+      padding: 8px 12px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px #000;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.75);
+      margin-top: 100px;
+      border-radius: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="location" style="top: 20%; left: 10%;" onclick="scrollToSection('shire')">The Shire</div>
+    <div class="location" style="top: 35%; left: 35%;" onclick="scrollToSection('rivendell')">Rivendell</div>
+    <div class="location" style="top: 50%; left: 55%;" onclick="scrollToSection('moria')">Mines of Moria</div>
+    <div class="location" style="top: 65%; left: 40%;" onclick="scrollToSection('rohan')">Rohan</div>
+    <div class="location" style="top: 80%; left: 75%;" onclick="scrollToSection('mountdoom')">Mount Doom</div>
+  </div>
+
+  <div id="shire" class="section">
+    <h2>It All Started With...</h2>
+    <p>[Your welcome message goes here]</p>
+  </div>
+
+  <div id="rivendell" class="section">
+    <h2>Our Memories</h2>
+    <p>[Photos or story descriptions go here]</p>
+  </div>
+
+  <div id="moria" class="section">
+    <h2>Play This Before You Go On</h2>
+    <p>[Embed your playlist or music link here]</p>
+  </div>
+
+  <div id="rohan" class="section">
+    <h2>Read This With Tea</h2>
+    <p>[Insert your heartfelt letter here]</p>
+  </div>
+
+  <div id="mountdoom" class="section">
+    <h2>The Final Treasure</h2>
+    <p>[Tease the gift or upcoming surprise here]</p>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
