@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Birthday Quest Map</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      height: 100%;
+      overflow: hidden;
       background-color: #1e1e1e;
       font-family: 'Georgia', serif;
     }
-  
     .map {
       position: relative;
-      width: 100vw;
-      aspect-ratio: 3 / 2; /* Adjust to your image's actual width:height ratio */
+      width: 100%;
+      height: 100%;
       background: url('fantasy-map.png') no-repeat center center;
-      background-size: contain; /* Ensures full map is visible */
+      background-size: contain;
       background-repeat: no-repeat;
-      margin: 0 auto;
+      background-position: center;
     }
-  
     .map-button {
       position: absolute;
       padding: 10px 14px;
@@ -34,17 +34,15 @@
       text-align: center;
       transition: background-color 0.3s;
     }
-  
     .map-button:hover {
       background-color: rgba(0, 0, 0, 0.9);
     }
-  
-    /* Adjusted button positions — tweak as needed */
-    #btn-shire { top: 8%; left: 15%; }
-    #btn-rivendell { top: 24%; left: 60%; }
-    #btn-moria { top: 45%; left: 16%; }
-    #btn-rohan { top: 60%; left: 47%; }
-    #btn-mountdoom { top: 75%; left: 80%; }
+    /* Re-aligned buttons relative to the actual image layout */
+    #btn-shire { top: 6%; left: 37%; }
+    #btn-rivendell { top: 19%; left: 52%; }
+    #btn-moria { top: 34%; left: 26%; }
+    #btn-rohan { top: 56%; left: 48%; }
+    #btn-mountdoom { top: 76%; left: 60%; }
   </style>
 </head>
 <body>
